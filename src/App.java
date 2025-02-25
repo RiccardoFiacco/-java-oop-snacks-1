@@ -1,4 +1,5 @@
 import exercise.bankaccount.BankAccount;
+import exercise.register.Register;
 import exercise.students.Student;
 
 public class App {
@@ -24,5 +25,17 @@ public class App {
         }
 
         System.out.println(ba1.getBalance());
+
+        Register r = new Register();
+
+        r.addStudent(fra);
+        Student[] arr = r.getStudents();
+
+        for (Student student : arr) {
+            if(student != null){
+                System.out.println(student);
+            }
+        }
+
     }
 }
